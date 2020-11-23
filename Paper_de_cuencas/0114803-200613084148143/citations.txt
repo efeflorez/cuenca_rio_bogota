@@ -1,0 +1,2 @@
+When using this dataset please use the following citation and pay attention to the rights documented in rights.txt:
+Londoño Gutiérrez N, Rojas Rojas J E (2019). Registros del inventario y monitoreo de la Biodiversidad en la Jurisdicción de la Corporación Autónoma Regional de Cundinamarca CAR. CAR - Corporación Autónoma Regional de Cundinamarca. Occurrence dataset https://doi.org/10.15472/wuexrk accessed via GBIF.org on 2020-11-17.

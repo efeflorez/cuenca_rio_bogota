@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<eml:eml xmlns:eml="eml://ecoinformatics.org/eml-2.1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="eml://ecoinformatics.org/eml-2.1.1 http://rs.gbif.org/schema/eml-gbif-profile/1.1/eml.xsd"
+        packageId="528d764c-c43f-46d7-b192-27361ea378f5"  system="http://gbif.org" scope="system"
+  xml:lang="es">
+
+<dataset>
+      <alternateIdentifier>10.15472/wuexrk</alternateIdentifier>
+        <alternateIdentifier>https://ipt.biodiversidad.co/sib/resource?r=car_dnr_monitoreo</alternateIdentifier>
+    <title>Registros del inventario y monitoreo de la Biodiversidad en la Jurisdicción de la Corporación Autónoma Regional de Cundinamarca CAR</title>
+    <creator>
+    <individualName>
+<givenName>Nelson</givenName>          <surName>Londoño Gutiérrez</surName>
+    </individualName>
+<organizationName>Corporación Autónoma Regional de Cundinamarca CAR</organizationName><positionName>Biólogo. M.Sc Grupo de Biodiversidad Dirección de Recursos Naturales DRN</positionName>    <address>
+<deliveryPoint>Av. Esperanza # 62-49 Costado Esfera Pisos 6 y 7</deliveryPoint><city>Bogotá</city><administrativeArea>Cundinamarca</administrativeArea><country>COLOMBIA</country>    </address>
+<phone>580 11 11 ext 1905</phone><electronicMailAddress>nlondonog@car.gov.co</electronicMailAddress><onlineUrl>https://www.car.gov.co/</onlineUrl>      <userId directory="http://scholar.google.com/citations?user=">899999062-6</userId>
+    </creator>
+    <creator>
+    <individualName>
+<givenName>Jhon Eduard</givenName>          <surName>Rojas Rojas</surName>
+    </individualName>
+<organizationName>Corporación Autónoma Regional de Cundinamarca CAR</organizationName><positionName>Coordinador Grupo de Biodiversidad Dirección de Recursos Naturales DRN</positionName>    <address>
+<deliveryPoint>Av. Esperanza # 62-49 Costado Esfera Pisos 6 y 7</deliveryPoint><city>Bogotá</city><administrativeArea>Cundinamarca</administrativeArea><country>COLOMBIA</country>    </address>
+<phone>580 11 11</phone><electronicMailAddress>jerojasr@car.gov.co</electronicMailAddress><onlineUrl>https://www.car.gov.co/</onlineUrl>      <userId directory="http://scholar.google.com/citations?user=">899999062-6</userId>
+    </creator>
+    <metadataProvider>
+    <individualName>
+<givenName>Nelson</givenName>          <surName>Londoño Gutiérrez</surName>
+    </individualName>
+<organizationName>Corporación Autónoma Regional de Cundinamarca CAR</organizationName><positionName>Biólogo M.Sc Grupo de Biodiversidad Dirección de Recursos Naturales DRN</positionName>    <address>
+<deliveryPoint>Av. Esperanza # 62-49 Costado Esfera Pisos 6 y 7</deliveryPoint><city>Bogotá</city><administrativeArea>Cundinamarca</administrativeArea><country>COLOMBIA</country>    </address>
+<phone>580 11 11</phone><electronicMailAddress>nlondonog@car.gov.co</electronicMailAddress><onlineUrl>https://www.car.gov.co/</onlineUrl>      <userId directory="http://scholar.google.com/citations?user=">899999062-6</userId>
+    </metadataProvider>
+    <associatedParty>
+    <individualName>
+<givenName>Nelson</givenName>          <surName>Londoño Gutiérrez</surName>
+    </individualName>
+<organizationName>Corporación Autónoma Regional de Cundinamarca CAR</organizationName><positionName>Biólogo M.Sc - conservación, gestión y manejo de la biodiversidad y los ecosistemas en la Jurisdicción CAR</positionName>    <address>
+<deliveryPoint>Corporación Autónoma Regional de Cundinamarca CAR Sede Central Av. Esperanza #62-49 Piso 6</deliveryPoint><city>Bogotá</city><administrativeArea>Cundinamarca</administrativeArea><country>COLOMBIA</country>    </address>
+<phone>5801111 ext 1905</phone><electronicMailAddress>territoriobiodiversocar@gmail.com</electronicMailAddress>      <userId directory="https://www.linkedin.com/profile/view?id=">https://www.linkedin.com/in/nelson-londo%C3%B1o-guti%C3%A9rrez-46526495/</userId>
+    <role>CONTENT_PROVIDER</role>
+    </associatedParty>
+      <pubDate>
+      2019-12-04
+      </pubDate>
+    <language>SPANISH</language>
+    <abstract>
+        <para>El presente conjunto de datos corresponde a las actividades de inventario y monitoreo de la biodiversidad en la Jurisdicción CAR, realizada por el Grupo de Biodiversidad de la Dirección de Recursos Naturales entre 2016 y 2019. Estos registros biológicos hacen parte del desarrollo de Planes de Manejo y Conservación de especies amenazadas y de Prevención, Manejo y Control de especies invasoras.</para>
+    </abstract>
+        <keywordSet>
+              <keyword>Especie amenazada</keyword>
+              <keyword>Planes de manejo</keyword>
+              <keyword>Páramo</keyword>
+              <keyword>Especie invasora</keyword>
+              <keyword>Amenaza</keyword>
+              <keyword>Complejo lagunar</keyword>
+              <keyword>CAR Cundinamarca</keyword>
+              <keyword>Humedal</keyword>
+              <keyword>Bosque seco</keyword>
+              <keywordThesaurus>n/a</keywordThesaurus>
+        </keywordSet>
+        <keywordSet>
+              <keyword>Occurrence</keyword>
+              <keywordThesaurus>GBIF Dataset Type Vocabulary: http://rs.gbif.org/vocabulary/gbif/dataset_type.xml</keywordThesaurus>
+        </keywordSet>
+        <keywordSet>
+              <keyword>Observation</keyword>
+              <keywordThesaurus>GBIF Dataset Subtype Vocabulary: http://rs.gbif.org/vocabulary/gbif/dataset_subtype.xml</keywordThesaurus>
+        </keywordSet>
+      <intellectualRights>
+        <para>This work is licensed under a <ulink url="http://creativecommons.org/licenses/by-nc/4.0/legalcode"><citetitle>Creative Commons Attribution Non Commercial (CC-BY-NC) 4.0 License</citetitle></ulink>.</para>
+      </intellectualRights>
+      <coverage>
+            <geographicCoverage>
+                  <geographicDescription>La Corporación Autónoma Regional de Cundinamarca – CAR, tiene jurisdicción en:
+Bogotá D.C., y en los siguientes municipios del Departamento de Cundinamarca: Agua de Dios, Albán, Anapoima, Anolaima, Apulo, Arbeláez, Beltrán, Bituima, Bojacá, Cabrera, Cachipay, Cajicá, Caparrapí, Carmen de Carupa, Chaguaní, Chía, Cogua, Cota, Cucunubá, Chocontá, El Colegio, El Peñón El Rosal, Facatativa, Funza, Fúquene, Fusagasugá, Gachancipá, Girardot, Granada, Guacheta, Guaduas, Guataquí, Guatavita, Guayabal de Síquima, Jerusalén, La Calera, La Mesa, La Palma, La Peña, La Vega, Lenguazaque, Machetá, Madrid, Manta, Mosquera, Nariño, Nemocón, Nilo, Nimaima, Nocaima, Pacho, Paime, Pandi, Pasca, Puerto Salgar, Pulí, Quebradanegra, Quipile, Ricaurte, San Antonio del Tequendama, San Bernando, San Cayetano, San Francisco, San Juan de Rioseco, Sasaima, Sesquilé, Sibaté, Silvania, Simijaca, Soacha, Sopó, Subachoque, Suesca, Supatá, Susa, Sutatausa, Tabio, Tausa, Tena, Tenjo, Tibacuy, Tibirita, Tocaima, Tocancipá, Topaipí, Ubaté, Utica, Venecia, Vergara, Viotá, Villagómez, Villapinzón, Villeta, Vianí, Yacopí, Zipacón y Zipaquirá. 
+Su jurisdicción incluye igualmente los municipios de Chiquinquirá, Saboya, San Miguel de Sema, Caldas, Buena Vista y Raquirá en el Departamento de Boyacá.”</geographicDescription>
+                  <boundingCoordinates>
+                      <westBoundingCoordinate>-74.866</westBoundingCoordinate>
+                      <eastBoundingCoordinate>-73.202</eastBoundingCoordinate>
+                      <northBoundingCoordinate>5.736</northBoundingCoordinate>
+                      <southBoundingCoordinate>4.155</southBoundingCoordinate>
+                  </boundingCoordinates>
+            </geographicCoverage>
+          <temporalCoverage>
+            <rangeOfDates>
+              <beginDate>
+                <calendarDate>      2016-01-01
+</calendarDate>
+              </beginDate>
+              <endDate>
+                <calendarDate>      2018-12-31
+</calendarDate>
+              </endDate>
+            </rangeOfDates>
+          </temporalCoverage>
+      </coverage>
+      <maintenance>
+          <description>
+              <para></para>
+          </description>
+          <maintenanceUpdateFrequency>notPlanned</maintenanceUpdateFrequency>
+      </maintenance>
+      <contact>
+    <individualName>
+<givenName>Jhon Eduard</givenName>          <surName>Rojas Rojas</surName>
+    </individualName>
+<organizationName>Corporación Autónoma Regional de Cundinamarca CAR</organizationName><positionName>Coordinador Grupo de Biodiversidad Dirección de Recursos Naturales DRN</positionName>    <address>
+<deliveryPoint>Av. Esperanza # 62-49 Costado Esfera Pisos 6 y 7</deliveryPoint><city>Bogotá</city><administrativeArea>Cundinamarca</administrativeArea><country>COLOMBIA</country>    </address>
+<phone>580 11 11</phone><electronicMailAddress>jerojasr@car.gov.co</electronicMailAddress><onlineUrl>https://www.car.gov.co/</onlineUrl>      <userId directory="http://scholar.google.com/citations?user=">899999062-6</userId>
+      </contact>
+      <methods>
+            <methodStep>
+                <description>
+                    <para>Las metodologías empleadas son las dispuestas por el Instituto de Investigaciones y Recursos Biológicos Alexander von Humboldt (IAvH) para el inventario y estudio de la biodiversidad.</para>
+                </description>
+            </methodStep>
+            <sampling>
+                <studyExtent>
+                    <description>
+                        <para>Jurisdicción de la Corporación Autónoma Regional de Cundinamarca – CAR en:
+Bogotá D.C., y en los siguientes municipios del Departamento de Cundinamarca: Agua de Dios, Albán, Anapoima, Anolaima, Apulo, Arbeláez, Beltrán, Bituima, Bojacá, Cabrera, Cachipay, Cajicá, Caparrapí, Carmen de Carupa, Chaguaní, Chía, Cogua, Cota, Cucunubá, Chocontá, El Colegio, El Peñón El Rosal, Facatativa, Funza, Fúquene, Fusagasugá, Gachancipá, Girardot, Granada, Guacheta, Guaduas, Guataquí, Guatavita, Guayabal de Síquima, Jerusalén, La Calera, La Mesa, La Palma, La Peña, La Vega, Lenguazaque, Machetá, Madrid, Manta, Mosquera, Nariño, Nemocón, Nilo, Nimaima, Nocaima, Pacho, Paime, Pandi, Pasca, Puerto Salgar, Pulí, Quebradanegra, Quipile, Ricaurte, San Antonio del Tequendama, San Bernando, San Cayetano, San Francisco, San Juan de Rioseco, Sasaima, Sesquilé, Sibaté, Silvania, Simijaca, Soacha, Sopó, Subachoque, Suesca, Supatá, Susa, Sutatausa, Tabio, Tausa, Tena, Tenjo, Tibacuy, Tibirita, Tocaima, Tocancipá, Topaipí, Ubaté, Utica, Venecia, Vergara, Viotá, Villagómez, Villapinzón, Villeta, Vianí, Yacopí, Zipacón y Zipaquirá. 
+Su jurisdicción incluye igualmente los municipios de Chiquinquirá, Saboya, San Miguel de Sema, Caldas, Buena Vista y Raquirá en el Departamento de Boyacá.”</para>
+                    </description>
+                </studyExtent>
+                <samplingDescription>
+                    <para>Métodos de muestreo con cámaras trampa, redes de niebla, observaciones directas dependiendo el grupo biológico.</para>
+                </samplingDescription>
+            </sampling>
+            <qualityControl>
+                <description>
+                    <para>El control de calidad del presente conjunto de datos está basado en lo que dispone el Sistema de Información en Biodiversidad CAR -SIBIO-CAR.Este cuenta con 4 etapas de validación. 1. Revisión del profesional que recibe y da visto bueno a los formatos de campo entregados por el contratista. 2. Revisión de la taxonomía, datos de localidad y georeferenciación por parte de un biólogo y un especialista SIG. Digitación de datos en el perfil.Validación del documento digital 3. Depuración y limpieza de datos para ser públicados en el sitema interno GEOAMBIENTAL- Modulo Biodiversidad. 4. Remisión a SiB Colombia para revisión y limpieza. Publicación final del conjunto de datos en SiB.</para>
+                </description>
+            </qualityControl>
+      </methods>
+
+      <project id="Inventario y monitoreo de la Biodiversidad en la Jurisdicción de la Corporación Autónoma Regional de Cundinamarca CAR">
+          <title>Inventario y monitoreo de la Biodiversidad en la Jurisdicción de la Corporación Autónoma Regional de Cundinamarca CAR 2016-2018</title>
+          <personnel>
+    <individualName>
+<givenName>Jhon Eduard</givenName>          <surName>Rojas Rojas</surName>
+    </individualName>
+      <userId directory="http://scholar.google.com/citations?user=">jerojasr@car.gov.co</userId>
+    <role>CUSTODIAN_STEWARD</role>
+          </personnel>
+          <abstract>
+              <para>Datos de ocurrencia provenientes de las actividades de inventario y monitoreo de la biodiversidad en la Jurisdicción CAR.</para>
+          </abstract>
+          <funding>
+              <para>Recursos propios de la misionalidad de la Corporación Autónoma Regional de Cundinamarca CAR.</para>
+          </funding>
+            <studyAreaDescription>
+                <descriptor name="generic" citableClassificationSystem="false">
+                    <descriptorValue>Jurisdicción de la Corporación Autónoma Regional de Cundinamarca CAR.</descriptorValue>
+                </descriptor>
+            </studyAreaDescription>
+            <designDescription>
+                <description>
+                    <para>Priorización de especies anual, comprendida entre el 2016 y el 2018.</para>
+                </description>
+            </designDescription>
+      </project>
+</dataset>
+
+<additionalMetadata>
+    <metadata>
+      <gbif>
+        <dateStamp>2020-11-17T23:41:45Z</dateStamp>
+      <citation identifier="https://doi.org/10.15472/wuexrk">Londoño Gutiérrez N, Rojas Rojas J E (2019). Registros del inventario y monitoreo de la Biodiversidad en la Jurisdicción de la Corporación Autónoma Regional de Cundinamarca CAR. CAR - Corporación Autónoma Regional de Cundinamarca. Occurrence dataset https://doi.org/10.15472/wuexrk accessed via GBIF.org on 2020-11-17.</citation>
+              <resourceLogoUrl>https://s3.amazonaws.com/sib-resources/images/logos-socios/portal-sib/logo-car.png</resourceLogoUrl>
+        </gbif>
+    </metadata>
+</additionalMetadata>
+
+</eml:eml>

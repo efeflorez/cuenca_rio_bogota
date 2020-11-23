@@ -1,0 +1,3 @@
+
+Dataset: Registros del inventario y monitoreo de la Biodiversidad en la Jurisdicción de la Corporación Autónoma Regional de Cundinamarca CAR
+Rights as supplied: http://creativecommons.org/licenses/by-nc/4.0/legalcode
