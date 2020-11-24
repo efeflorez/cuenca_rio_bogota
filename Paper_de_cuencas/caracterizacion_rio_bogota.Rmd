@@ -54,13 +54,44 @@ Diversos estudios han focalizado sus esfuerzos en analizar las influencias tanto
 
 # Metodología
 
-- Para el presente artículo se utilizaron las planchas integradas de la cuenca del río Bogotá del Convenio "Fondo de adaptación" del Instituto Geológico Agustín Codazzi (IGAC) a escala 1:25.000, con información de redes de drenajes y curvas de nivel disponibles en su sitio web (https://geoportal.igac.gov.co/contenido/convenios-igac) [@convenio_igac]. 
-- Polígonos en formato "shape" para la delimitación de la cuenca del río Bogotá, y las subcuencas que la conforman en el portal web (https://datosgeograficos.car.gov.co/datasets/ed418474401f49baa2931e35dd7a8919)
+- Polígonos en formato "shape" para la delimitación de la cuenca del río Bogotá, y las subcuencas que la conforman en el portal web (https://datosgeograficos.car.gov.co/datasets/ed418474401f49baa2931e35dd7a8919). Con estos se elaboró el mapa de la delimitación de la cuenca con su cauce principal, como de las subcuencas, todo por medio de las herramientas vectoriales del paquete básico de qgis.
 - Imágenes satelitales LandSat 8 entre las coordenadas aproximadas (5.25, -73.65) y (4.26, -74.78) del 17 de Marzo del año 2018 para el mapa de coberturas (Información obtenida de U.S. Geological Survey). Se procesaron en los programas de sistemas de información geográfica QGIS [@QGIS_software]. Primero se hizo la corrección atmosférica para cada una de las dos imágenes con la extensión Semi-Automatic Classification Plugin (SCP), posteriormente se elaboró una clasificación de coberturas no supervisada con la extensión dzetsaka.
 - Bases de datos de precipitación y temperatura del portal “datos.gov.co” y proporcionadas por POMCA Río Bogotá, se analizaron con el software estadístico R en su versión 4.0.3 [@R]. Se transformaron a formato largo con ayuda de la librería TidyR, se depuró y se obtuvo la información resúmen para cada subcuenca y la cuenca completa con la librería dplyr y se graficaron con la librería ggplot2, todas las librerías anteriores pertenecientes a la librería Tidyverse [@tidyverse].
+- Para el presente artículo se utilizaron las planchas integradas de la cuenca del río Bogotá del Convenio "Fondo de adaptación" del Instituto Geológico Agustín Codazzi (IGAC) a escala 1:25.000, con información de redes de drenajes y curvas de nivel disponibles en su sitio web (https://geoportal.igac.gov.co/contenido/convenios-igac) [@convenio_igac]. Se obtuvo la morfometría de la cuenca, mediante la tabla de atributos que estos mismos tenían, y aplicando las fórmulas que se mencionan a continuación. Posteriormente se elaboró la tabla resúmen con la librería kableExtra [@kableextra] del lenguaje de programación R.
 
+- **(P):** Longitud de la divisoria de aguas, o perímetro.
+
+- **(L):** Longitud de la cuenca.
+
+- **Ancho de la cuenca (B):** Es la relación entre el área y la longitud de la cuenca.
  
- $$Tc = {\left(11.9 \times \frac{{(\frac{L}{1.6})}^3}{0.3h}\right)}^{0.385}$$
+$$B = \dfrac{A}{L}$$
+ 
+- **Factor de forma (Kf):** Es la relación entre el área y el cuadrado de la longitud de la cuenca. Se busca determinar qué tan cuadrada o alargada es una cuenca.
+ 
+$$Kf = \dfrac{A}{{L}^2}$$
+ 
+Si $Kf>1$, entonces la cuenca es más achatada, por lo que tiene un río principal más corto y un mayor riesgo de crecidas.
+
+
+- **Coeficiente de compacidad (Kc):** Es la relación entre el perímetro de la cuenca (P) y la longitud de la circunferencia de un círculo de igual área a la de la cuenca.
+
+Si $Kc=1$, entonce la cuenca es circular.
+
+$$Kc = 0.28\dfrac{P}{{A}^{1/2}}$$
+ 
+Si $Kc \approx 1$, habrá una tendencia a concetrar mayores volúmenes de agua.
+ 
+ 
+- **Tiempo de concentración (Tc):** El tiempo que tarda una gota de agua en fluir desde el punto más remoto hasta la salida de la cuenca. O el tiempo mínimo necesario para que toda la cuenca esté aportando agua al punto de salida (según Kirpich). Generalmente está expresada en minutos. Una fórmula generalizada para hallar el tiempo de concentración es:
+
+$$Tc = 0,066{\dfrac{L}{\sqrt{S_0}}}^{0,77}$$
+Pero para la cuenca del río Bogotá, se elaboró un ajuste que concluye en la siguiente ecuación. 
+
+$$Tc = {\left(11.9 \times \frac{{(\frac{L}{1.6})}^3}{0.3}\right)}^{0.385}$$
+
+
+
 
 
 # Resultados
@@ -396,15 +427,14 @@ Acontecimientos como el levantamiento de la cordillera, derivaron en aumentos de
 Así como la cordillera oriental, una de las formas estructurales más relevante de la cuenca es el altiplano, definida como una depresión tecto-sedimentaria subsidente (Van Der Hammen, 1995) ha sido el espacio ocupado por varios niveles lacustres en la medida en que la cordillera fue emergiendo hasta su altitud actual. En el Plioceno Temprano exisió un lago que cubría la parte central del altiplano y  las subcuencas Subachoque, Sisga, Siecha, Soacha, Muña, y Alto de Bogotá. Un descenso lacustre que ocurrió hace 40.000 años convirtió este antiguo lago, en lo que hoy conocemos como altiplano. El descenso en el nivel del lago ocasionó la formación de distintos niveles de terrazas por disección. Embalses de la cuenca como Neusa, Sisga, Tominé y Muña imitan el paisaje de cuando el altiplano era un lago.
 La formación de glaciares se dio en  altitudes superiores a 3.000 m. Abajo de los  espacios  cubiertos  con  hielo  hubo  un  cinturón  o  piso en el que por restricciones térmicas no había vegetación y las frecuentes nevadas generaban un escurrimiento (por fusión), arriba del páramo de ese momento, es decir arriba de los 2.750 m. aproximadamente [@CAR].
 
-
  
 - Tabla
-  - Reptación
-  - Disección
-    - Corrientes mayores
-    - red menor de drenaje
-  - Escurrimiento superficial
-  - Movimientos en masa
+  - Reptación: Es un proceso discontinuo en el que una o varias partículas se desplazan principalmente pendiente abajo.
+  - Disección: Corte sobre los suelos por acción del agua encauzada.
+    - Corrientes mayores: En la cuenca media y alta, la disección es discreta. En la cuenca baja los drenajes no ejercen disección activa. En las terrazas altas se presentan encharcamientos, en las bajas escurrimientos por desbordes, y en unas pocas terrazas se presenta la sufosión (Escurrimiento sub-superficial con formación de túneles).
+    - Red menor de drenaje: Cuando se analiza la cartografía, se observa una red densa de drenajes, pero en realidad pueden no llevar agua. En la cuenca del río Bogotá, la mayoría de los cauces elementales no llevan agua.
+  - Escurrimiento superficial: Si hay agua, lluvia, y pendiente, el agua escurre en la parte superficial. Si es erosivo o no, depende de la cobertura vegetal. Los lugares en vía de desertificación de la cuenca río Bogotá son la cuenca media y alta de Checua, cuenca media y baja de Siecha, alrededores del embalse Tominé, Cerros Mondoñedo, el Fute, cuenca baja del río Bastillas, vertiente derecha del río Bojacá, las vertientes izquierda derecha en la parte media y baja del Alto de Bogotá. Todas presentan surcos, cárcavas (por sufosión) y truncamiento de suelos.
+  - Movimientos en masa:
     - Desprendimientos
     - Derrumbes
     - Solufluxion
@@ -413,6 +443,18 @@ La formación de glaciares se dio en  altitudes superiores a 3.000 m. Abajo de l
     - Flujos torrenciales
   - Sedimentación
 
+## Suelos
+
+En la cuenca del río Bogotá, los tipos suelos son variables debido a la cantidad de pisos térmicos que allí se tienen (Extremadamente frío húmedo, Muy frío muy húmedo, Frío muy húmedo, Frío húmedo, Frío seco, Medio húmedo, Cálido húmedo, Cálido seco). [@CAR]
+
+- En los climas Extremadamente fríos húmedos, se encuentran suelos bien drenados, generalmente de texturas gruesas y limitados por fragmentos de roca.
+- En climas Muy fríos muy húmedos los suelos son bien a excesivamente drenados, profundos a superficiales, texturas medias a finas (aunque en algunos lugares pueden ser moderadamente gruesas) en lugares mayormente erosionales. En las laderas de acumulación los suelos son pobremente drenados, muy superficiales y poco evolucionados.
+- En clima Frío muy húmedo los suelos tienen un buen drenaje, con texturas finas a moderadamente gruesas y profundos a superficiales limitados con el material parental.
+- La unidad climática predominante es Frío húmedo, de los suelos que se encuentran en esta unidad, la mayoría son bien drenados, texturas moderadamente finas a moderadamente gruesas en laderas erosionales y texturas finas en los Planos de terraza, tienden a ser profundos (siendo más profundos en las terrazas) y algunos están limitados por horizontes argílicos.
+- En clima Frío seco la mayoría presentan un buen drenaje (Excepto en los Planos de inundación donde el drenaje es muy pobre), en Laderas erosionales tienen texturas finas y son moderadamente profundos a superficiales, mientras que en los Planos de terraza son de textura ligeramente más gruesa y más profundos.
+- En clima Medio húmedo los suelos tienen un buen drenaje, son de texturas moderadamente finas, de moderadamente profundos a profundos (Aunque en algunos lugares son superficiales limitados por fragmentos de roca).
+- En clima Cálido húmedo son bien drenados, profundos y de texturas finas a moderadamente finas.
+- En clima Cálido seco los suelos son bien drenados, de texturas finas a moderadamente gruesas, y pueden ser desde muy superficiales a profundos.
 
 ## Factores Bióticos
 
