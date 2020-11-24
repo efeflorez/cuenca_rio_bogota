@@ -1,6 +1,7 @@
 ---
 title: "Caracterización de la cuenca del río Bogotá"
 author: "Loaiza F."
+keywords: "Cuenca hidrográfica, Río Bogotá, Morfometría, Caracterización, Contaminación"
 date: "`r format(Sys.time(), '*%a %d de %b del %Y*')`"
 lang: es-ES
 output: 
@@ -42,6 +43,8 @@ knitr::knit_hooks$set(plot = function (x, options) {
 ```
 
 # Resúmen
+
+La cuenca del río Bogotá es la unidad de estudio para que sirve de apoyo para los tomadores de decisiones. En este estudio se elaboró la caracterización completa de la cuenca del río Bogotá. La cual es alargada y en su mayoría de pendiente accidentada, esto hace que su caudal sea elevado y el tiempo de respuesta es corto. Desde su parte alta hay presencia de contaminantes nocivos para la vida, tales como metales pesados (Cadmio, plomo, mercurio, y arsénico) o residuos agroindustrales. Todo esto en conjunto con la poca cantidad de bosques naturales y la poca regulación de las actividades productivas o de extración concluyen en la necesidad de restaurar ecosistemas para un mejoramiento en la calidad de la misma, y una intervención más activa por parte de las Organizaciones que administran la cuenca del río Bogotá.
 
 # Introducción
 
@@ -89,32 +92,33 @@ $$Tc = 0,066{\dfrac{L}{\sqrt{S_0}}}^{0,77}$$
 Pero para la cuenca del río Bogotá, se elaboró un ajuste que concluye en la siguiente ecuación. 
 
 $$Tc = {\left(11.9 \times \frac{{(\frac{L}{1.6})}^3}{0.3}\right)}^{0.385}$$
-
-
-
-
+\newpage
 
 # Resultados
+
+## Morfometría
 
 ```{r fig.cap='Mapa de drenajes de la cuenca del rio Bogotá.'}
 knitr::include_graphics("Cuenca_rio_bogota_drenajes.png")
 ```
 
+En su mayoría, la cuenca del río Bogotá se sitúa en altitudes mayores a los 2500 m de altitud (Ver Figura 2.), un poco menos de su tercera parte está por debajo de 2500 m de altitud, correspondiéndole estas altitudes inferiores a la desembocadura de la misma. Esto en cierto modo explica las temperaturas medias bajas que allí se presentan.
+
 ```{r fig.cap='Perfil Longitudinal', out.width='70%', fig.align='center'}
 knitr::include_graphics("perfil_longitudinal.png")
 ```
 
-En la figuraxxxxxx se observa un río maduro y estable, no hay aporte de sedimentos, más sí de socavamiento. El 70% de la cuenca del Río Bogotá se encuentra por debajo de los 3100 msnm, por lo que todo uso del suelo o plantaciones debe enfocarse por debajo de esta altitud.
+En la Figura 3 se observa un río maduro y estable, no hay aporte de sedimentos, más sí de socavamiento. El 70% de la cuenca del Río Bogotá se encuentra por debajo de los 3100 msnm, por lo que todo uso del suelo o plantaciones debe enfocarse por debajo de esta altitud.
 
 ```{r fig.cap='Curva hipsométrica (Tomado de @CAR)', out.width='70%', fig.align='center'}
 knitr::include_graphics("curva_hipso.png")
 ```
-En la figura xxxxxx se observa que la mayor área de la cuenca presenta un relieve fuertemente ondulado a fuertemente quebrado, el grado de la pendiente para la cuenca del río Bogotá nos muestra que se tiene a la pendiente como factor determinante de la respuesta a los eventos de precipitación y crecidas.
+En la Figura 4 se observa que la mayor área de la cuenca presenta un relieve fuertemente ondulado a fuertemente quebrado, el grado de la pendiente para la cuenca del río Bogotá nos muestra que se tiene a la pendiente como factor determinante de la respuesta a los eventos de precipitación y crecidas.
 
 ```{r fig.cap='Distribución  de  los  diferentes  rangos  de  pendiente,  extensión  territorial  y porcentual para la totalidad de la cuenca del río Bogota  (Tomada de Consorcio Planeación Ecológica – Ecoforest. 2006.)'}
 knitr::include_graphics("pendientes_tabla.png")
 ```
-En la figura XXXXX tenemos un reúmen de los parámetros morfométricos, de los que se interpreta: 
+En la Figura 5 tenemos un reúmen de los parámetros morfométricos, de los que se interpreta: 
 
 - El factor de forma nos indica que la cuenca tiene una forma alargada, lo que indica un mayor tiempo de reacción en caso de crecidas.
 - El coeficiente de compacidad refuerza lo dicho en el punto anterior, pues un valor de (1) nos indica que la cuenca tendría una forma de círculo perfecto, pero a medida que aumenta se tiende a alargar.
@@ -126,11 +130,16 @@ En la figura XXXXX tenemos un reúmen de los parámetros morfométricos, de los 
 knitr::include_graphics("morfometria.png")
 ```
 
+
+## Climatología
+
+Para los análisis climatológicos se diferencian las subcuencas que componen el río Bogotá, pues si bien la cuenca del río Bogotá es la unidad a estudiar. La cuenca del río Bogotá está constituida por 19 subcuencas (Ver Figura 6.), todas estas presentan condiciones climáticas heterogéneas que es necesario tener en cuenta para los posteriores análisis.
+
 ```{r fig.cap='Subcuencas de la cuenca del río Bogotá.'}
 knitr::include_graphics("Subcuencas.png")
 ```
 
-
+Las temperaturas medias más altas para la cuenca (Ver Figura 7.) se presentan en el río Apúlo, río Bogotá, río Calandaima, río Negro, y río Magdalena. En el caso del río Bogotá, al estar cerca a las áreas más pobladas de la cuenca, y debido al cambio de coberturas vegetales por otros de índole urbana como cemento, ladrillos, asfalto, han ido apareciendo pequeñas islas térmicas o islas de calor que tienden a expandirse conforme se expande la población hacia la periferia [@islas_calor]. En otros casos como en el río Calandaima, la ganadería, la producción agrícola y los diversos cultivos han modificado la cobertura vegetal [@calor_calandaima]. Por lo que a grandes rasgos, los aumentos de temparutura están altamente influenciados por el cambio de coberturas vegetales.
 
 ```{r fig.cap='Temperaturas medias de las subcuencas del río Bogotá'}
 t_mean <- read.csv("Temperaturas_Medias.csv") %>%
@@ -170,7 +179,7 @@ t_mean %>%
 
 ```
 
-```{r fig.cap='Temperaturas máximas de las subcuencas del río Bogotá'}
+```{r fig.cap='Temperaturas máximas de las subcuencas del río Bogotá', eval=FALSE}
 t_max <- read.csv("Temperaturas_M_ximas.csv") %>%
   pivot_longer(
     ENERO:DICIEMBRE, 
@@ -205,6 +214,8 @@ t_max %>%
   theme_bw() + xlab("Mes") + ylab("Temperatura (ºC)")
 ```
 
+La temperatura media anual tiende a variar poco, como se menciona en el POMCA de CAR 2006, la temperatura media se encuentra entre 12 y 15°C, con datos hasta el año 2019 vemos que este promedio aumenta ligeramente su límite inferior, con valores oscilando entre los 13 a 15ºC sin diferencias significativas en los cambios de temperatura a lo largo del año, por lo que se considera una temperatura isotermal (Figura 8.A). Para temperaturas mínimas medias, los valores oscilan de 5 a 7ºC (Valores más bajos en enero y febrero) (CAR 2006). Y temperaturas máximas también Isotermales entre 21 y 25ºC, con sus valores más bajos en los meses de Junio, Julio y Diciembre y los más altos en Febrero, Marzo y Noviembre (Figura 8.B).
+
 ```{r fig.cap='El gráfico A corresponde a las temperaturas medias, mientras que el gráfico B corresponde a las temperaturas máximas entre los años 1938 hasta 2019.', out.height='80%'}
 t_media_gral <- read.csv("Temperaturas_Medias.csv") %>% 
   pivot_longer(
@@ -234,9 +245,12 @@ t_media_gral <- read.csv("Temperaturas_Medias.csv") %>%
 
 t_media_general <- t_media_gral %>% 
   ggplot(data = ., mapping = aes(y = t_media, x = MES)) + 
-  geom_col() + aes(x = fct_inorder(MES)) + theme_bw() + 
+  geom_col() + 
+  aes(x = fct_inorder(MES)) + 
+  scale_y_continuous(breaks = seq(0, 25, 5)) + 
+  theme_bw() + 
   xlab("Mes") + ylab("Temperatura (ºC)") + 
-  ggtitle("A")
+  ggtitle("A") 
 
 
 
@@ -275,9 +289,9 @@ t_maxima_general <- t_max_gral %>%
 grid.arrange(t_media_general, t_maxima_general, ncol=2)
 ```
 
+En la cuenca se registra una precipitación entre 400 y 2200  milímetros  anuales [@CAR]. La distribución anual de las precipitacione presenta un régimen bimodal (Ver Figura 9.) con picos en Abril-Mayo y Octubre-Diciembre debido a la Zona de convergencia intertropical (ZCIT) las  zonas con menor nivel de lluvias son la subcuenca río Soacha y parte de las  subcuencas  río Bogotá  sector  Salto Soacha, Embalse Muña, río Bogotá Sector Tibitoc – Soacha y río Balsillas. La mayor precipitación se registra en los extremos orientales de las subcuencas Embalse Tominé y río Teusacá [@CAR]. 
 
-
-```{r fig.cap='Precipitación anual multianual sectorizada por subcuencas con datos desde el año 1931 hasta el año 2019 de todas las estaciones de medición disponibles que se encuentran dentro del área respectiva a la  cuenca del Río Bogotá.', out.width="80%", fig.align='center', message=FALSE}
+```{r fig.cap='Precipitación anual multianual sectorizada por subcuencas con datos desde el año 1931 hasta el año 2019 de todas las estaciones de medición disponibles que se encuentran dentro del área respectiva a la  cuenca del Río Bogotá.', out.width="80%", fig.align='center', message=FALSE, eval=FALSE}
 
 pp_mensual <- read.csv("Precipitaciones_Totales_Mensuales.csv") %>%
   pivot_longer(
@@ -345,55 +359,26 @@ pp_mes_ano %>%
   theme(plot.title = element_text(hjust = 0.5))
 ```
 
+Para la oferta y demanda hídrica @CAR elaboró una tabla de características hidrológicas (Ver Figura x.). Teniendo en cuenta la oferta en periodo seco y periodo húmedo, y la demanda de recurso hidrológico de las fuentes domestica, agropecuaria, industrial, y ecológica. Para todas las subcuencas se hace una valoración empleando el índice de escasez para los periodos secos y húmedos. Y se le asignó una variable (De bajo a alto) cualitativa según el valor de este índice.
 
-- Poner gráfica por subcuencas (y luego por toda la cuenca) de pp, t y radiación.
 
-## Subcuencas
+## Coberturas vegetales
 
-### Río alto
+La cuenca del río Bogotá está destinada en su mayoría a ganadería y a cultivos extensivos, muestra de ello es la gran área que estas coberturas abarcan (Ver Figura 10.)
 
-- el  exceso  de  materia  orgánica  agota  el  oxígeno  del agua y por ende, hay una fuerte reducción de la diversidad de especies de macroinvertebrados y de 
-organismos acuáticos (10) [@Fajardo].
-- La figura 7, muestra la variación de la temperatura del agua a lo largo del tramo del en estudio, en esta se puede visualizar que la temperatura va aumentando significativamente hasta la estación 
-AAQQ, y  vuelve  a  descender  en  la  estación QQ. Sin  embargo,  vuelve  a  ascender  los  valores,  encontrando  que  pasados  29.31  km  del  tramo  en  estudio  se  registra  la temperatura más alta con un valor de 19.3°C, pudiéndose inferir que el factor incidente en el aumento de la temperatura del agua puede ser causada por la industria curtidora que se encuentra en el área y a las descargas de aguas residuales del municipio de Villapinzón. Es preciso señalar en que este municipio no cuenta con una planta de tratamiento de sus aguas residuales. Luego, la temperatura vuelve a bajar para la estación PVT lo que se debe a tributarios recibidos por el río en este segmento del trazado analizado. Además de **las condiciones morfológicas del río en este punto que ayudan a autodepurar el cuerpo de agua superficial** [@Fajardo].
-- El resto de resultados de @Fajardo.
+```{r fig.cap='Cobertura y usos del suelo, tomado de [@CAR]'}
+knitr::include_graphics("coberturas.png")
+```
 
-- Pinzón (curtiembres de villapinzón y chocontá).
-  - http://www.scielo.org.co/scielo.php?pid=S0120-00112018000100045&script=sci_abstract&tlng=en
-  - http://revistas.unipamplona.edu.co/ojs_viceinves/index.php/RA/article/view/3967
-  - Actividades económicas como las curtiembres, agroindustria y minería, contaminan la cuenca alta del Río Bogotá; debido al vertimiento de algunos metales pesados (MP) como el Cromo (Cr), el Mercurio (Hg) y el Arsénico (As). **Esta problemática la afronta el río Bogotá desde su incursión en el casco urbano del municipio de Villapinzón, a solo 8 kilómetros del páramo de Guacheneque en donde nace, hasta su desembocadura en el río Magdalena.**
-  - Caracterizadas las aguas del río en el sector del municipio de Chocontá, estas presentaron una coloración más oscura y olores fuertes con presencia de sulfuros, especialmente sulfuro de hidrógeno H 2 S. [@Pinzon]
-  - Villapinzón, municipio localizado aguas abajo del páramo de Guacheneque, donde nace el rio Bogotá. [@Pinzon]
-  - En el análisis de As las concentraciones obtenidas en los lodos de Villapinzón evidencian la actividad minera que se presenta clandestinamente en el páramo de Guacheneque. [@Pinzon]
-  - Curtiembres a 30 metros aumentan las pp en Villapinzón, por lo que el caudal en Chocontá es más alto y arrastra todos los metales pesados vertidos desde Villapinzón, hasta la desembocadura de la cuenca. [@Pinzon]
-  - Los animalitos consumen metales pesados. [@Pinzon]
-  - El mercurio no es el mayor problema en este río, el cromo con concentraciones tan altas es el principal problema de las autoridades ambientales y de la comunidad debido a su alta afinidad con
-los organismos vivos generando bioacumulación e intoxicación de éstos.
-  - El municipio de Villapinzón es el mayor generador de vertimientos de MP generados por las 110 curtiembres ubicadas en la ronda del río y los subproductos de sales de cromo son transportados al lecho del río, pero éstos no sedimentan al instante, por lo cual no se identifican concentraciones superiores a 219 mg/kg, aunque este valor sigue siendo superior a los máximos permisibles de la resolución 631 de 2015.
-  - El municipio de Chocontá con menos de 50 empresas dedicadas a la curtiembre presenta concentraciones de Cr superiores a los 690 mg/kg, valor muy superior a Villapinzón por más de 633,5 mg/Kg Cr en la segunda toma de muestras, lo cual se debe al caudal del agua que aumenta conforme las condiciones meteorológicas cambian.
-  
-#### Tominé
 
-En lugares como la cuenca Tominé se presenta un alto gradiente climático y diversos ecosistemas, los asentamientos cambiaron el flujo del agua, en guatavita hay actividades agrícolas y ganaderas, vertimientos de aguas residuales domésticas e industriales (cultivo de flores) provenientes del municipio de Guatavita [@cuenca_tomine].
-Debido a la utilización de químicos en la cuenca alta, y la degradación de las coberturas vegetales cercanas al Embalse de Tominé, el "buchón" invadió más de 300 hectáreas. La creación de este embalse llevó a que los habitantes de las zonas rurales cambiaran sus trabajos y pasó tener una economía productiva, a una turística con senderos, miradores, la nueva tendencia de los "Glamping", y avistamiento de fauna y flora [@multifuncionalidad_tomine].
 
-#### Neusa
-
-- Esta subcuenca presenta la mayor área de cultivos con 11875 Ha, respecto a las 32546,93 Ha destinadas para actividad agrícola en la cuenca alta del Río Bogotá, conformada por cultivos mixtos; su mayor representación está conformada por la heterogeneidad de la cobertura debido al tamaño reducido de los predios, su cobertura vegetal se denomina herbácea – pastos, que tiene un uso pecuario actualmente de tipo semi-intensivo y extensivo [@calidad_neusa].
-- la economía se basa en el desarrollo de actividades relacionadas con siembras, criaderos de truchas, actividades avícolas y principalmente actividades de pastero alrededor de la zona, lo cual influye directamente sobre la calidad del agua [@calidad_neusa].
-- un incumplimiento en los parámetros de Hierro, Turbiedad, Coliformes Totales y E. coli [@calidad_neusa].
-- Durante las visitas de inspección sanitaria se evidencio en campo que los vertimientos que se presentan alrededor del tramo son principalmente de origen doméstico, y en menor escala producto de las actividades agrícolas y ganaderas, ya que en general los predios encuestados se dedican exclusivamente al pastoreo y a la siembra de pequeñas parcelas de maíz y papa, y únicamente un predio se dedica exclusivamente a la actividad de crianza de truchas, en donde las características del agua mejoraron notablemente [@calidad_neusa].
-
-### Parte baja
-
-- Según otros estudios realizados aguas abajo por Pinzón (2018) en el municipio de Cajicá, se encontraron concentraciones hasta de 18,5 mg/kg de Hg. [@Pinzon]
 
 ## Geología
 
 El área de la Sabana de Bogota, esta ubicada en la cordillera Oriental abarca la zona axial y el  inicio  de  sus  flancos  oriental  y  occidental, sus rocas abarcan edades desde el Cretácico inferior hasta el Cuaternario [@Geologia].
 
 El Cretácico inferior se compone de las formaciones Trinchera, Socota, Capotes, e Hiló, hacen parte de la parte baja de la cuenca del río Bogotá (ver la Figura 4. delimitado en color rojo).
-Las rocas del Cretácico superior afloran en la parte central de la cuenca, así como sus flancos oriental y occidental, estas corresponden a las formaciones Simijaca, La Frontera, Conejo, Grupo Guadalupe, y Grupo Olini (Éste último sólo aflora en la parte baja de la cuenca del río Bogotá) [@Geologia].
+Las rocas del Cretácico superior afloran en la parte central de la cuenca, así como sus flancos oriental y occidental, estas corresponden a las formaciones Simijaca, La Frontera, Conejo, Grupo Guadalupe, y Grupo Olini (Éste último sólo aflora en la parte baja de la cuenca del río Bogotá, ver Figuta 11.) [@Geologia].
 
 
 
@@ -430,7 +415,7 @@ knitr::include_graphics("mapa_geologico_rio_bogota.png")
 
 
 La cuenca del río Bogotá podría decirse que se divide en dos partes, una es el **Altiplano con las subcuencas de sus bordes** (Todo lo que está aguas arriba de la garganta del río Bogotá en los cerros de Boquerón) y la otra que comprende **desde el Altiplano hasta su desembocadura en el río Magdalena.**
-Esta cuenca está situada sobre u sustrato sedimentario plegado y fallado, en el cuál hay depresiones tecto-sedimentarias. En la cuenca los escarpes de origen tectónico son bastante comunes. La "Sabana de Bogotá" es la mayor formación estructural que constituye el altiplano, aunque no es un término técnico, pues cuando se menciona a la "Sabana de Bogotá" se hace referencia a la sedimentación de un lago formado desde la segunda parte del periodo Terciario. A lo largo y ancho de la cuenca también se presentan colinas y relieves más fuertes y accidentados; Se sabe que las colinas suaves provienen de rocas arcillosas y los relieves fuertes son derivados de areniscas. En la parte baja de la cuenca (relieves bajos en relación al nivel del mar) son comunes los perfiles profundos de meteorización (Más que todo en las zonas con climas tropicales de tendencia seca). Por otra parte en las divisorias de las subcuencas afloran las alteritas de color rojo intenso (ver Figura 5.), divisorias con estos colores rojos se pueden ver en Neusa, Teusacá, Checua, divisoria derecha del Alto de Bogotá, entre otros. Un significado o interpretación de el avistamiento de alteritas, es una inminente situación de peligro ambiental (Erosiones verticales u horizontales) [@CAR].
+Esta cuenca está situada sobre u sustrato sedimentario plegado y fallado, en el cuál hay depresiones tecto-sedimentarias. En la cuenca los escarpes de origen tectónico son bastante comunes. La "Sabana de Bogotá" es la mayor formación estructural que constituye el altiplano, aunque no es un término técnico, pues cuando se menciona a la "Sabana de Bogotá" se hace referencia a la sedimentación de un lago formado desde la segunda parte del periodo Terciario. A lo largo y ancho de la cuenca también se presentan colinas y relieves más fuertes y accidentados; Se sabe que las colinas suaves provienen de rocas arcillosas y los relieves fuertes son derivados de areniscas. En la parte baja de la cuenca (relieves bajos en relación al nivel del mar) son comunes los perfiles profundos de meteorización (Más que todo en las zonas con climas tropicales de tendencia seca). Por otra parte en las divisorias de las subcuencas afloran las alteritas de color rojo intenso (ver Figura 12.), divisorias con estos colores rojos se pueden ver en Neusa, Teusacá, Checua, divisoria derecha del Alto de Bogotá, entre otros. Un significado o interpretación de el avistamiento de alteritas, es una inminente situación de peligro ambiental (Erosiones verticales u horizontales) [@CAR].
 
 
 ```{r fig.cap='Tomada de @alterita'}
@@ -473,9 +458,9 @@ En la cuenca del río Bogotá, los tipos suelos son variables debido a la cantid
 
 ### Diversidad de especies (Fauna y flora)
 
-En la figura XXXXXXXX se presentan algunas de las especies de fauna y flora más comúnes en la cuenca del río Bogotá.
+En la Figura 13. se presentan algunas de las especies de fauna y flora más comúnes en la cuenca del río Bogotá.
 
-- **Turdus fuscater (Mirla Común):** El tamaño del ave es de 28 a 33 cm y pesa entre 128 y 175 g. Es una mirla grande y agresiva; las partes superiores son de color marrón grisáceo oscuro con un anillo ocular estrecho de color naranja intenso, tiene el pico y las patas de color naranja, las alas y la cola más oscuras y las partes inferiores más pálidas. Las hembras y los juveniles pueden no tener el anillo ocular naranja. El inmaduro es más pálido y moteado con color negro y ante.(Hilty&Brown, 1986, 2001; Collar, 2016)
+- **Mirla Común (Turdus fuscater):** El tamaño del ave es de 28 a 33 cm y pesa entre 128 y 175 g. Es una mirla grande y agresiva; las partes superiores son de color marrón grisáceo oscuro con un anillo ocular estrecho de color naranja intenso, tiene el pico y las patas de color naranja, las alas y la cola más oscuras y las partes inferiores más pálidas. Las hembras y los juveniles pueden no tener el anillo ocular naranja. El inmaduro es más pálido y moteado con color negro y ante.(Hilty&Brown, 1986, 2001; Collar, 2016)
 - **Caracolí (Anacardium excelsum)**
 - **Roble (Quercus humboldtii)**
 - **Oso andino (Tremarctos ornatus):** Especie de los Andes tropicales, su hábitat potencial es por encima de los 1000m, especialmente en bosques nublados. En la cuenca del río Bogotá actualmente se distribuyen en los municipios de Guatavita, Sesquilé, y La Calera.
@@ -489,7 +474,7 @@ Perezoso (Choloepus hoffmanni): Mamífero árboreo nocturno y solitario. habita 
 
 
 
-```{r}
+```{r fig.cap='Frecuencia de especies de fauna y flora en la cuenca del río Bogotá'}
 spp <- read.csv("biodiversidad_car.csv")
 
 spp %>% group_by(species) %>% 
@@ -501,15 +486,38 @@ spp %>% group_by(species) %>%
   scale_x_continuous(breaks = seq(0, 250, 25))
 ```
 
-## Componentes Socioeconómicos
+## Factores socioeconómicos
 
 En  general,  para  toda  la  cuenca  del  río  Bogotá,  las  amenazas  relacionadas  con inundaciones y movimientos en masa son localizadas y, desde luego, más relevantes por su  ocurrencia  en  tiempos  cortos  y  los  riesgos  que  de  ahí  se  derivan,  además,  se  les  da mayor  publicidad.  Sin  embargo,  y  aunque  desde  la  geomorfología  se  trata  de  una  visión parcial,  con  base  en  las  evidencias  en  campo,  se  plantea  una  amenaza  socio-ambiental en relación con los efectos del escurrimiento superficial con erosión se suelos, obturación de cauces, desaparición de lagunas por sedimentación y, de ahí, una inseguridad frente a la  producción  agropecuaria  y,  también,  una  inseguridad  hídrica  para  la  población.  Para áreas extensas dentro de la cuenca, más que amenazas, se trata de impactos ya en curso y con duraciones más largas, a veces menos perceptibles y, también, menos conocidas.  
 
-- @neusa_calidad
-- @parasitos
+
+### Parte alta
+
+En la parte Alta de la cuenca del río Bogotá es de vital importancia la conservación de la calidad de las aguas, pues este será el primer lugar por el que entran y se distribuyen a lo largo y ancho de la cuenca. En el municipio de Villapinzón y Chocontá impera la industria curtidora. En el caso de Villapinzón, todos los desechos de las curtiembres son vertidos al río. Villapinzón no cuenca con plantas de tratamiento de aguas. El vertimiento de este tipo de desechos causa aumentos en la temperatura del río, esto aumenta la dinámica y termina por agotar el oxígeno del agua, reduciento la diversidad de especies de macroinvertebrados y organismos acuáticos [@Fajardo].
+Actividades económicas como la minería, las cuertiembres y la agroindustria contaminan la cuenca alta del río Bogotá, con estos vertimientos entran al río (entre otros) metales pesados como Cromo (Cr), Mercurio (Hg), y Arsénico (As). A sólo 8 kilómetros del nacimiento del río Bogotá (Municipio de Villapinzón) en el páramo de Guacheneque y hasta su desembocadura en el río Magdalena, se debe afrontar la presencia de estos agentes contaminantes. En Municipios como Chocontá las aguas son oscuras y olores fuertes debido a la presencia de sulfuro de hidrógeno ($H_{2}S$). La minería clandestina que se lleva a cabo en el páramo de Guacheneque es la causante de las altas concentraciones de Arsénico (As) obtenidas en los lodos de Villapinzón. Las curtiembres a 30m del río provocan más precipitaciones lo que aumenta el caudal que al llegar a Chocontá es más alto que en Villapinzón, de esta forma arrastra todos los metales pesados hasta la desembocadura. La fauna que habita estos lugares consume los metales pesados y termina muriendo, aunque el mayor problema de todos es el Cromo (Cr) debido a su alta afinidad con los seres vivos. Esto es preocupante a gran escala, pues Villapinzón cuenta con 110 Curtiembres mientras que Chocontá cuenta con unas 50 [@Pinzon].
+En Tominé los vertimientos también son constantes, fruto del alto gradiente climático y las actividades económicas que allí se practican, como lo son la Ganadería y el cultivo de flores (proveniente del municipio de Guatavita) [@cuenca_tomine].
+Debido a la utilización de químicos en la cuenca alta, y la degradación de las coberturas vegetales cercanas al Embalse de Tominé, el "buchón" invadió más de 300 hectáreas. La creación de este embalse llevó a que los habitantes de las zonas rurales cambiaran sus trabajos y pasó tener una economía productiva, a una turística con senderos, miradores, la nueva tendencia de los "Glamping", y avistamiento de fauna y flora [@multifuncionalidad_tomine].
+También en subcuencas como Neusa, la principal actvidad económica son los cultivos, pero debido a los pequeños tamaños y grandes cantidades de los predios, el paisaje es heterogéneo, unas 32546 Ha son destinadas para este fin. Otras zonas de Neusa desarrollan actividades pecuarias y la mayor cantidad de cobertura vegetal corresponde a pastos. En general casi todas las actividades están relacionadas con siembras, criaderos de truchas, actividades avícolas, y una de las principales es el pastoreo alrededor de la zona, actividad que influye directamente sobre la calidad del agua. Por lo anterior se ha evidenciado un incumplimiento en los niveles permisibles de Hierro, Turbiedad, Coliformes Totales y E. coli. Durante visitas de inspección sanitaria se determinó que los vertimientos provienen principalmente de un origen doméstico, pues la mayoría son predios pequeños que se dedican al pastoreo y siembras pequeñas de maíz y papa [@calidad_neusa]. 
+
+
+### Parte Media
+
+En la cuenca media del río Bogotá está destinada en su mayoría a cultivos, los más característicos son papa,  zanahoria,  fresas  lechuga,  arveja,  repollo  y hortalizas. Pero por los altos costos de acueductos y las ubicaciones de algunos predios que los hacen de difícil acceso, la comunidad ha optado por utilizar el agua del río Bogotá para el riego de sus plantaciones, sin tener en cuenta la contaminación de este recurso. Aguas arriba, al pasar por la zona urbana el agua se contamina con desechos de aguas negras, desechos industriales, residuos orgánicos y materia fecal de los criaderos de animales, y desechos de agricultura (fertilizantes, herbicidad y demás residuos). El riego con estas aguas deteriora los suelos y afecta la salud de quienes están en contacto directo debido a los microorganismos fitopatógenos. Todo esto hacia futúro hace que los productos agrícolas sean vehículo de enfermedades, disminuir la calidad su calidad y por ende su rentabilidad [@fitopatogenos]. En varios cultivos Hortícolas en la Sabana de Bogotá se encontró Cadmio (Cd) y Plomo (Pb) en plantaciones de lechuga, apio, repollo, y brócoli en el Municipio de Soacha[@metales_c_media]. Actividades como las anteriormente mencionadas convierten los riegos con aguas del río Bogotá en la mayor problemática de la cuenca media del río Bogotá. 
+
+
+### Parte baja
+
+La parte baja de la cuenca es un sector con desarrollo urbano, allí se llevan a cabo actividades como explotación minera, explotación de canteras sin planificación ni prevención de daños al ecosistema, esto ha aumentado los riesgos por las inundaciones recurrentes debido al desbordamiento del río Tunjuelito [@c_baja]. 
+También esta parte baja de la cuenca recibe todos los residuos provenientes de las partes altas de la cuenca tales como metales pesados, aguas residuales domésticas, industriales, residuos de productos agroquímicos, fitoparásitos, entre otros; Tal es el caso de los jardines infantiles en Tunjuelito, donde la gran mayoría de la población de niños presenta parásitos gastrointestinales, esto debido al acueducto y a las costumbres que tienen los habitantes de estos sectores [@parasitos].
+En los municipios de Tocaima, Ricaurte y Girardot se ven afectados en su biodiversidad debido a la contaminación e intervención antrópica de los ecosistemas. La diversidad de especies que allí se conserva se debe a los bosques de ripario o bosques de galería. Estos se encuentran cerca de los cursos de agua, manteniendo los niveles del cauce estable y sirviendo como resguardo de la fauna en épocas de sequía. Actividades como la ganadería y los cultibos han afectado fuertemente la diversidad de grupos sensibles a los cambios como anfibios y reptiles [@ripario].
+
 
 # Conclusión
 
-# Agradecimientos
+La cuenca hidrográfica como unidad de estudio es la mejor manera de describir de manera completa cualquier lugar que sea objeto de estudio, ya que la hidrología es el puente que relaciona todos los componentes que interacúen en un sitio dado. Si bien hay mucha información disponible respecto a la cuenca del río Bogotá, no es suficiente ni mucho menos concluyente cualquier afirmación que se haga basada en datos sin haberlos corroborado de manera presencial.
+A grandes rasgos es necesario restaurar los ecosistemas mediante las plantaciones que más se acomoden a las subcuencas, pues debido a su contaminación excesiva y las grandes poblaciones se han deteriorado los suelos, ha disminuido la diversidad de manera considerable, la cantidad de ejemplares a los que se les hace elemento, tales como el Oso Andino es demasiado preocupante debido a que su habitat se encuentra reducido, y no existe la suficiente cantidad de corredores ecológicos como para que puedan interactuar con otras comunidades. 
+La poca o nula regulación que se ejerce sobre actividades que generan tantos desechos y son tan perjudiciales para el río y todos los organismos de la cuenca parece no tener soluciones a corto plazo, los agentes armados, la corrupción y el desinterés por mantener la cuenca lo menos contaminada posible han convertido a la cuenca del río Bogotá en un referente de contaminación a nivel global. Es urgente una intervención activa de los entes encargados de la administración de esta y todas las cuencas que componen la CAR. Más pedagogía en los habitantes y oportunidades de trabajo que les permitan dejar de lado las actividades que perjudiquen la cuenca y les permita subsistir de manera digna.
+Es necesario el mejoramiento de la red de acueductos para con el fin de disminuir los riesgos relacionados con la salud de los habitantes sectores que se abastecen directamente del cauce (ya sea para riego o consumo).
+
 
 # Bibliografía
