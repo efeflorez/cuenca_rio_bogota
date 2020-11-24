@@ -41,7 +41,7 @@ knitr::knit_hooks$set(plot = function (x, options) {
 })
 ```
 
-# Resúmennnnnnnn
+# Resúmen
 
 # Introducción
 
@@ -104,9 +104,23 @@ knitr::include_graphics("Cuenca_rio_bogota_drenajes.png")
 knitr::include_graphics("perfil_longitudinal.png")
 ```
 
+En la figuraxxxxxx se observa un río maduro y estable, no hay aporte de sedimentos, más sí de socavamiento. El 70% de la cuenca del Río Bogotá se encuentra por debajo de los 3100 msnm, por lo que todo uso del suelo o plantaciones debe enfocarse por debajo de esta altitud.
+
+```{r fig.cap='Curva hipsométrica (Tomado de @CAR)', out.width='70%', fig.align='center'}
+knitr::include_graphics("curva_hipso.png")
+```
+En la figura xxxxxx se observa que la mayor área de la cuenca presenta un relieve fuertemente ondulado a fuertemente quebrado, el grado de la pendiente para la cuenca del río Bogotá nos muestra que se tiene a la pendiente como factor determinante de la respuesta a los eventos de precipitación y crecidas.
+
 ```{r fig.cap='Distribución  de  los  diferentes  rangos  de  pendiente,  extensión  territorial  y porcentual para la totalidad de la cuenca del río Bogota  (Tomada de Consorcio Planeación Ecológica – Ecoforest. 2006.)'}
 knitr::include_graphics("pendientes_tabla.png")
 ```
+En la figura XXXXX tenemos un reúmen de los parámetros morfométricos, de los que se interpreta: 
+
+- El factor de forma nos indica que la cuenca tiene una forma alargada, lo que indica un mayor tiempo de reacción en caso de crecidas.
+- El coeficiente de compacidad refuerza lo dicho en el punto anterior, pues un valor de (1) nos indica que la cuenca tendría una forma de círculo perfecto, pero a medida que aumenta se tiende a alargar.
+- La pendiente media muestra que es un terreno accidentado.
+- El tiempo de reacción para la cuenca es consecuente con la predominancia del terreno escarpado mencionado en el apartado anterior.
+
 
 ```{r fig.cap='Parámetros morfométricos', out.width='50%', fig.align='center'}
 knitr::include_graphics("morfometria.png")
@@ -428,20 +442,19 @@ Así como la cordillera oriental, una de las formas estructurales más relevante
 La formación de glaciares se dio en  altitudes superiores a 3.000 m. Abajo de los  espacios  cubiertos  con  hielo  hubo  un  cinturón  o  piso en el que por restricciones térmicas no había vegetación y las frecuentes nevadas generaban un escurrimiento (por fusión), arriba del páramo de ese momento, es decir arriba de los 2.750 m. aproximadamente [@CAR].
 
  
-- Tabla
-  - Reptación: Es un proceso discontinuo en el que una o varias partículas se desplazan principalmente pendiente abajo.
-  - Disección: Corte sobre los suelos por acción del agua encauzada.
-    - Corrientes mayores: En la cuenca media y alta, la disección es discreta. En la cuenca baja los drenajes no ejercen disección activa. En las terrazas altas se presentan encharcamientos, en las bajas escurrimientos por desbordes, y en unas pocas terrazas se presenta la sufosión (Escurrimiento sub-superficial con formación de túneles).
-    - Red menor de drenaje: Cuando se analiza la cartografía, se observa una red densa de drenajes, pero en realidad pueden no llevar agua. En la cuenca del río Bogotá, la mayoría de los cauces elementales no llevan agua.
-  - Escurrimiento superficial: Si hay agua, lluvia, y pendiente, el agua escurre en la parte superficial. Si es erosivo o no, depende de la cobertura vegetal. Los lugares en vía de desertificación de la cuenca río Bogotá son la cuenca media y alta de Checua, cuenca media y baja de Siecha, alrededores del embalse Tominé, Cerros Mondoñedo, el Fute, cuenca baja del río Bastillas, vertiente derecha del río Bojacá, las vertientes izquierda derecha en la parte media y baja del Alto de Bogotá. Todas presentan surcos, cárcavas (por sufosión) y truncamiento de suelos.
-  - Movimientos en masa:
-    - Desprendimientos
-    - Derrumbes
-    - Solufluxion
-    - Deslizamientos rotacionales
-    - Deslizamientos en plancha
-    - Flujos torrenciales
-  - Sedimentación
+Algunos procesos morfogénicos actuales son:
+
+- Reptación: Es un proceso discontinuo en el que una o varias partículas se desplazan principalmente pendiente abajo.
+- Disección: Corte sobre los suelos por acción del agua encauzada.
+  - Corrientes mayores: En la cuenca media y alta, la disección es discreta. En la cuenca baja los drenajes no ejercen disección activa. En las terrazas altas se presentan encharcamientos, en las bajas escurrimientos por desbordes, y en unas pocas terrazas se presenta la sufosión (Escurrimiento sub-superficial con formación de túneles).
+  - Red menor de drenaje: Cuando se analiza la cartografía, se observa una red densa de drenajes, pero en realidad pueden no llevar agua. En la cuenca del río Bogotá, la mayoría de los cauces elementales no llevan agua.
+- Escurrimiento superficial: Si hay agua, lluvia, y pendiente, el agua escurre en la parte superficial. Si es erosivo o no, depende de la cobertura vegetal. Los lugares en vía de desertificación de la cuenca río Bogotá son la cuenca media y alta de Checua, cuenca media y baja de Siecha, alrededores del embalse Tominé, Cerros Mondoñedo, el Fute, cuenca baja del río Bastillas, vertiente derecha del río Bojacá, las vertientes izquierda derecha en la parte media y baja del Alto de Bogotá. Todas presentan surcos, cárcavas (por sufosión) y truncamiento de suelos.
+- Movimientos en masa:Movimientos gravitatorios e hidro-gravitatorios.
+  - Desprendimientos: Desprendimiento de rocas por gravedad. En el río Bogotá ocurren en zonas de explotación de canteras, como Soacha o los Cerros Orientales de Bogotá.
+  - Derrumbes: Movimientos laterales de material detrítico, más comúnes en épocas lluviosas. Su ocurrencia es mayor al este y sureste de Soacha, norte de Sibaté, noreste de Bogotá (Bordes de canteras).
+  - Deslizamientos en plancha: Poco frecuentes en esta cuenca, algunos casos se observaron en la vertiente izquierda del río Teusacá (debido a las canteras).
+  - Flujos torrenciales: Desplazamiento de materiales que se vuelven líquidos al alcanzar el cauce. Ocurren frecuentemente a pequeña escala en el noreste de Bogotá, debido a canteras (que ya fueron cerradas).
+- Sedimentación: Depositación de sedimentos. En los cauces puede elevar el nivel del mismo.
 
 ## Suelos
 
@@ -458,15 +471,35 @@ En la cuenca del río Bogotá, los tipos suelos son variables debido a la cantid
 
 ## Factores Bióticos
 
-### Diversidad de especies vegetales
+### Diversidad de especies (Fauna y flora)
+
+En la figura XXXXXXXX se presentan algunas de las especies de fauna y flora más comúnes en la cuenca del río Bogotá.
+
+- **Turdus fuscater (Mirla Común):** El tamaño del ave es de 28 a 33 cm y pesa entre 128 y 175 g. Es una mirla grande y agresiva; las partes superiores son de color marrón grisáceo oscuro con un anillo ocular estrecho de color naranja intenso, tiene el pico y las patas de color naranja, las alas y la cola más oscuras y las partes inferiores más pálidas. Las hembras y los juveniles pueden no tener el anillo ocular naranja. El inmaduro es más pálido y moteado con color negro y ante.(Hilty&Brown, 1986, 2001; Collar, 2016)
+- **Caracolí (Anacardium excelsum)**
+- **Roble (Quercus humboldtii)**
+- **Oso andino (Tremarctos ornatus):** Especie de los Andes tropicales, su hábitat potencial es por encima de los 1000m, especialmente en bosques nublados. En la cuenca del río Bogotá actualmente se distribuyen en los municipios de Guatavita, Sesquilé, y La Calera.
+- **Puma (Puma concolor):** Aunque prefiere lugares con buena cobertura vegetal, puede vivir en hábitats perturbados.Su hábitat potencial se encuentra en en Tequendama, Río Negro, Ubaté y Chiquinquirá [@puma].
+- **Venado Coliblanco (Odocoileus goudotil):** Mamifero rumiante, especie recientemente descrita propia de las zonas de Páramos Andinos.
+Perezoso (Choloepus hoffmanni): Mamífero árboreo nocturno y solitario. habita bosques tropicales desde el nivel del mar hasta 3000m msnm (Plese, T.; Chiarello, A. 2014).
+- **Chucha (Didelphis pernigra):** Es el mamífero silvestre más grande que sobrevive en las áreas urbanas y suburbanas de la Sabana y es relativamente común en áreas rurales de los Andes. También es el mamífero silvestre más grande que sobrevive en las áreas urbanas y suburbanas de la Sabana y es relativamente común en áreas rurales de los Andes [@chucha].
+- **Curi (Cavia aparea)**
+- **Caracol Gigante Africano (Achatina fulica):** Es considerado una plaga de importancia agrícola ya que posee una dieta polífoga, lo que signifíca que no tiene preferencias sobre ningún cultivo en particular y es capaz de alimentarse de más de 200 especies vegetales [@fauna].
+
+
+
 
 ```{r}
 spp <- read.csv("biodiversidad_car.csv")
-```
 
- - @herbario_car
- - @multifuncionalidad_tomine y @cuenca_tomine
- - @macroinvertebrados
+spp %>% group_by(species) %>% 
+  filter(n() > 2, 
+         species != "") %>% 
+  ggplot(., mapping = aes(y = species, breaks =)) + 
+  geom_bar() + xlab("Frecuencia") + 
+  ylab("Especie") + theme_bw() + 
+  scale_x_continuous(breaks = seq(0, 250, 25))
+```
 
 ## Componentes Socioeconómicos
 
